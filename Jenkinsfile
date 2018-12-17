@@ -9,7 +9,15 @@ pipeline {
     
     stage('Build'){
        steps {
-          sh 'mvn clean package'
+          node('windows') {
+            bat 'mvn clean package'
+          }
+          node('linux') {
+            sh 'mvn clean package'
+          }
+           node('osx') {
+            sh 'mvn clean package'
+          }
        }
       post {
         success {
