@@ -1,1 +1,1 @@
-Hello, World, stating build added....!
+Hello, World, staging build added....!
